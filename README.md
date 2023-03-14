@@ -1,5 +1,5 @@
-# Server
-========
+# Backend: RESTful API
+
 Express RESTful API Boilerplate Using TypeScript
 
 ## Global Requisites
@@ -175,5 +175,5 @@ The app uses **Sequelize Command-Line Interface (CLI)**. The CLI ships support f
 You can find detailed how to use Sequelize CL and many tips in [its documentation](https://sequelize.org/docs/v6/other-topics/migrations/).
 
 # Connect
-=========
+
 **Anh Tuan Hoang** <anhht83@gmail.com>  https://github.com/anhht83
