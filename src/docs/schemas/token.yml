@@ -1,0 +1,17 @@
+components:
+  schemas:
+    Token:
+      type: object
+      properties:
+        tokenType:
+          type: string
+          example: Bearer
+        accessToken:
+          type: string
+          example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Mjg5MzA2ND
+        refreshToken:
+          type: string
+          example: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2Mjg5MzA2ND
+        expiresIn:
+          type: string
+          example: 2021-08-14T08:44:04.358Z

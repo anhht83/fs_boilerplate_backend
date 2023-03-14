@@ -1,0 +1,15 @@
+components:
+  schemas:
+    Item:
+      type: object
+      properties:
+        name:
+          type: string
+          description: name of item
+          example: item name
+        startPrice:
+          type: float
+          example: 100.0
+        windowTime:
+          type: datetime
+          example: 2023-03-12 08:01:39

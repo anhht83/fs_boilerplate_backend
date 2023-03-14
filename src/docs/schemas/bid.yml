@@ -1,0 +1,12 @@
+components:
+  schemas:
+    Bid:
+      type: object
+      properties:
+        itemId:
+          type: integer
+          description: id of the item
+          example: 1
+        amount:
+          type: float
+          example: 100.0

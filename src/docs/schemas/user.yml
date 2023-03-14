@@ -1,0 +1,10 @@
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        email:
+          type: string
+          example: 'fake@example.com'
+        token:
+          $ref: "#components/schemas/Token"

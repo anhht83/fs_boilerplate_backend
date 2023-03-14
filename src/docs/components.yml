@@ -1,0 +1,24 @@
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT,
+  responses:
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+
+    404:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#components/responses/Error'
+          example:
+            code: 404
+            message: "Not Found"
