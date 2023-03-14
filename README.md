@@ -10,79 +10,6 @@ Express RESTful API Boilerplate Using TypeScript
 * socket.io (^4.*)
 * sequelize (^6.*)
 
-## App Structure
-```bash
-├── __test__
-│   ├── integrations # integrations test case
-│   ├── units # unit test cases
-├── dist
-├── src
-│   ├── config
-│   │   ├── express.ts # express setup
-│   │   ├── logger.ts # morgan logger
-│   │   ├── passport.ts # auth RestFulAPI setup
-│   │   ├── sequelize.ts # sequelize connections
-│   │   ├── socket.ts # socket.io setup
-│   │   ├── vars.js # mapping variables from .env file to js variables
-│   ├── consts
-│   │   ├── index.ts # enum, constans, ...
-│   ├── controllers
-│   │   ├── auth.controller.ts
-│   │   ├── bid.controller.ts
-│   │   ├── deposit.controller.ts
-│   │   ├── item.controller.ts
-│   │   ├── {controller_name}.controller.ts
-│   ├── database 
-│   │   ├── migrations
-│   │   │   ├── 20230311082632-create-user.js
-│   │   │   ├── ...
-│   │   ├── seeders
-│   ├── docs
-│   │   ├── schemas
-│   │   │   ├── auth.yml
-│   │   │   ├── ...
-│   │   ├── components.yml
-│   │   ├── swaggerDef.ts
-│   ├── middlewares
-│   │   ├── auth.middleware.ts
-│   │   ├── error.middleware.ts
-│   │   ├── rateLimit.middleware.ts
-│   │   ├── {name}.middleware.ts
-│   ├── models
-│   │   ├── index.ts # main ORM file, which compile all models and map sequelize connection to the models
-│   │   ├── bid.ts
-│   │   ├── deposit.ts
-│   │   ├── {db_table_single_name}.ts # aka model name
-│   ├── public # store/access static resources
-│   ├── repositories
-│   │   ├── bid.repository.ts
-│   │   ├── deposit.repository.ts
-│   │   ├── {model_name}.repository.ts # each model should be mapped to a repository
-│   ├── routes
-│   │   ├── v1
-│   │   │   ├── auth.routes.ts
-│   │   │   ├── {controller_name}.routes.ts # each routes file should handle method of a controller
-│   │   ├── {version} # versioning route
-│   │   ├── docs.route.ts # swagger document route
-│   │   ├── index.ts # main route file
-│   ├── utils # store helpers files
-│   ├── validations # store request validations
-│   │   ├── auth.validation.ts
-│   │   ├── bid.validation.ts
-│   │   ├── {controller_name}.validation.ts # the validations is groupped by controller
-├── index.ts # main file of the app
-├── .env.development
-├── .env.{NODE_ENV} # configuration file by env name
-├── .eslint* # eslint configuration
-├── .prettier* # prettier configuration
-├── .sequelizerc # sequelize command line configuration
-├── .git* # git configuration
-├── jest.config.ts
-├── nodemon.json
-├── package.json
-├── README.md
-└── tsconfig.json
-```
 ## Install, Configure & Run
 Below mentioned are the steps to install, configure & run in your platform/distributions.
 
@@ -169,7 +96,84 @@ Start your app in development mode at http://localhost:3001/docs
 
 ## Development
 
-### Migration / Seed
+### App Structure
+```bash
+├── __test__
+│   ├── integrations # integrations test case
+│   ├── units # unit test cases
+├── dist
+├── src
+│   ├── config
+│   │   ├── express.ts # express setup
+│   │   ├── logger.ts # morgan logger
+│   │   ├── passport.ts # auth RestFulAPI setup
+│   │   ├── sequelize.ts # sequelize connections
+│   │   ├── socket.ts # socket.io setup
+│   │   ├── vars.js # mapping variables from .env file to js variables
+│   ├── consts
+│   │   ├── index.ts # enum, constans, ...
+│   ├── controllers
+│   │   ├── auth.controller.ts
+│   │   ├── bid.controller.ts
+│   │   ├── deposit.controller.ts
+│   │   ├── item.controller.ts
+│   │   ├── {controller_name}.controller.ts
+│   ├── database 
+│   │   ├── migrations
+│   │   │   ├── 20230311082632-create-user.js
+│   │   │   ├── ...
+│   │   ├── seeders
+│   ├── docs
+│   │   ├── schemas
+│   │   │   ├── auth.yml
+│   │   │   ├── ...
+│   │   ├── components.yml
+│   │   ├── swaggerDef.ts
+│   ├── middlewares
+│   │   ├── auth.middleware.ts
+│   │   ├── error.middleware.ts
+│   │   ├── rateLimit.middleware.ts
+│   │   ├── {name}.middleware.ts
+│   ├── models
+│   │   ├── index.ts # main ORM file, which compile all models and map sequelize connection to the models
+│   │   ├── bid.ts
+│   │   ├── deposit.ts
+│   │   ├── {db_table_single_name}.ts # aka model name
+│   ├── public # store/access static resources
+│   ├── repositories
+│   │   ├── bid.repository.ts
+│   │   ├── deposit.repository.ts
+│   │   ├── {model_name}.repository.ts # each model should be mapped to a repository
+│   ├── routes
+│   │   ├── v1
+│   │   │   ├── auth.routes.ts
+│   │   │   ├── {controller_name}.routes.ts # each routes file should handle method of a controller
+│   │   ├── {version} # versioning route
+│   │   ├── docs.route.ts # swagger document route
+│   │   ├── index.ts # main route file
+│   ├── utils # store helpers files
+│   ├── validations # store request validations
+│   │   ├── auth.validation.ts
+│   │   ├── bid.validation.ts
+│   │   ├── {controller_name}.validation.ts # the validations is groupped by controller
+├── index.ts # main file of the app
+├── .env.development
+├── .env.{NODE_ENV} # configuration file by env name
+├── .eslint* # eslint configuration
+├── .prettier* # prettier configuration
+├── .sequelizerc # sequelize command line configuration
+├── .git* # git configuration
+├── jest.config.ts
+├── nodemon.json
+├── package.json
+├── README.md
+└── tsconfig.json
+```
+
+### Database models
+<img src="./misc/jitera_test_db.png"  alt="w3tec" width="400"/>
+
+### CL: Migration / Seed
 The app uses **Sequelize Command-Line Interface (CLI)**. The CLI ships support for migrations and project bootstrapping. 
 
 You can find detailed how to use Sequelize CL and many tips in [its documentation](https://sequelize.org/docs/v6/other-topics/migrations/).
