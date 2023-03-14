@@ -89,7 +89,7 @@ Below mentioned are the steps to install, configure & run in your platform/distr
 ### Install
 ```bash
 # Run command to clone the repo.
-git clone https://github.com/anhht83/fs_boilerplate_server.git
+git clone https://github.com/anhht83/fs_boilerplate_backend.git
 
 # Goto the cloned project folder, run command
 cd fs_boilerplate_server
